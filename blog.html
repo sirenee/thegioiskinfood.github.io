@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog</title>
+  <meta charset="utf-8">
+
+  <!-- Latest compiled and minified CSS -->
+<script type="text/javascript" nonce="e54ca3e7c59b428186501fe46d7" src="//local.adguard.org?ts=1604472557060&amp;type=content-script&amp;dmn=cdn.fbsbx.com&amp;app=com.apple.Safari&amp;css=1&amp;js=1&amp;gcss=1&amp;rel=1&amp;rji=1&amp;sbe=0"></script>
+<script type="text/javascript" nonce="e54ca3e7c59b428186501fe46d7" src="//local.adguard.org?ts=1604472557060&amp;name=AdGuard%20Extra%20Beta&amp;type=user-script"></script><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #more {display: none;}
+
+  html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/**/
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+  </style>
+  <style>
+
+.footer {
+  position: fixed;    
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+.fa {
+  padding: 5px;
+  font-size: 10px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+</style>
+
+  <!-- iNSERT THE JAVASCRIPT CODE HERE -->
+  <script>
+    function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+  </script>
+</head>
+
+
+<body style="height:1500px">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">The Gioi Skinfood</a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+  <a class="nav-link" href="index.html">Home</a>
+  </li>
+    <li class="nav-item">
+  <a class="nav-link" href="aboutus.html">About Us</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="blog.html">Blog</a>
+  </li>
+    <li class="nav-item">
+  <a class="nav-link" href="gallery.html">Gallery</a>
+  </li>
+    <li class="nav-item">
+  <a class="nav-link" href="contact.html">Contact</a>
+  </li>
+  </ul>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <form class="form-inline" action="/action_page.php">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</nav>
+</nav>
+<div class="container-fluid" style="margin-top:80px">
+  
+<div class="header">
+  <h2>Natural Skincare Cosmeties</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>MapleStory 3D – The public alpha test</h2>
+      <h5>Hello there. You all have heard about MapleStory 3D by now. Almost six years ago, I first published news about the development of MapleStory 3D.</h5>
+      <br>
+      <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/15.jpg" width="900" height="900">
+      <br>
+    </div>
+    <div class="card">
+      <h2>Level 200 !</h2>
+      <h5>A quick and short update this time: I finally accomplished level 200 on my Zero character! It took me a few weeks to level it from 100 to 200.</h5>
+      <br>
+     <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/16.jpg" width="900" height="900">
+      <br>
+    </div>
+    <div class="card">
+      <h2>MapleStory ~ Official Webtoon: Demian (Chapter 3)</h2>
+      <h5>The first and second chapter in English can be found here and here, thanks to Maplf. The artist (다솜) who created this webtoon has a Daum blog which can be found here.</h5>
+      <br>
+     <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/17.jpg" width="900" height="900">
+      <br>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2 class="text-center pt-3">About Me</h2>
+      <br>
+
+      <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/34.jpg" width="360" height="280">
+      <br>
+      <p>Hi !!!</p>
+      <p>I'm Vy. Owner of The Gioi Skinfood</p>
+      <p></p>
+    </div>
+    <div class="card">
+      <h3 class="text-center">Popular Post</h3>
+      <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/33.jpg" alt="first bg image" width="350" height="165">
+      <br>
+      <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/35.jpeg" alt="first bg image" width="350" height="195">
+      <br>
+      <img src="/Users/nguyenhaanh/Downloads/web-2-Vy/image/2/36.jpeg" alt="first bg image" width="350" height="195">    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <a href="https://www.facebook.com/vytheevilpancake/">My Facebook</a>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+<style>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+</div>
+</style>
+
+
+<div class="footer">
+  <br>
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="https://www.google.com" class="fa fa-google"></a>
+<a href="https://www.youtube.com" class="fa fa-youtube"></a>
+<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+
+  
+  <p class="pt-2"> copyright 2020 </p>
+
+</div>
+
+</body>
+
+
+
+</html>
